@@ -7,8 +7,8 @@ st.title('Bank Customer Churn Prediction')
 
 def churn_pred(pred_input):
     
-    pickled_model = pickle.load(open('Bank-Churn-Prediction/model.pkl', 'rb'))
-    pickled_scaler = pickle.load(open('Bank-Churn-Prediction/scaler.pkl', 'rb'))
+    pickled_model = pickle.load(open('Bank-Churn-Prediction/blob/main/model.pkl', 'rb'))
+    pickled_scaler = pickle.load(open('Bank-Churn-Prediction/blob/main/scaler.pkl', 'rb'))
     
     
     feature_columns = ['credit_score', 'country', 'gender', 'age', 'tenure', 'balance','products_number', 'credit_card','active_member', 'estimated_salary']
