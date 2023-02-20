@@ -28,6 +28,7 @@ def main():
     st.sidebar.info('Created By: P. KOMAL SAI ANURAG')
     st.sidebar.image('https://s16353.pcdn.co/wp-content/uploads/2018/06/Churn.png')
     st.sidebar.subheader("Github repositorty of the the project : ")
+    st.sidebar.markdown("https://github.com/saianurag234/Bank-Churn-Prediction")
 
 
     
@@ -61,16 +62,16 @@ def main():
         age = st.number_input('Enter the Age',0,100,0,1,'%d')
         
     with col2:
-        tenure = st.number_input('Number of Year as a Customer',0,50,0,1,'%d')
+        tenure = st.number_input('Number of Year as a Customer',0,20,0,1,'%d')
         
     with col3:
-        credit_score = st.number_input('Enter the Credit Score',0,2000,0,1,'%d')
+        credit_score = st.number_input('Enter the Credit Score',0,1000,0,1,'%d')
         
     with col4:
-        balance = st.number_input('Enter the Account Balance',0,1000000,0,5000,'%d')
+        balance = st.number_input('Enter the Account Balance',0,500000,0,5000,'%d')
         
     with col3:
-        product_number = st.number_input('Enter number of Products',0,20,0,1,'%d')
+        product_number = st.number_input('Enter number of Products',0,10,0,1,'%d')
         
     with col4:
         credit_card = st.selectbox('Customer has an Credit card or not', ['Select','Yes', 'No'])
@@ -89,7 +90,7 @@ def main():
             active = 0
         
     with col6:
-        salary = st.number_input('Enter the Estimated Salary',0,1000000,0,5000,'%d')
+        salary = st.number_input('Enter the Estimated Salary',0,600000,0,5000,'%d')
     
     
     button = st.button("Predict")
