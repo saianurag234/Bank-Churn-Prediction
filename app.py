@@ -1,5 +1,5 @@
 import streamlit as st
-import pickle
+import joblib
 import numpy as np
 import pandas as pd
 
@@ -7,8 +7,8 @@ st.title('Bank Customer Churn Prediction')
 
 def churn_pred(pred_input):
     
-    pickled_model = pickle.load(open('model.pkl', 'rb'))
-    pickled_scaler = pickle.load(open('scaler.pkl', 'rb'))
+    pickled_model = joblib.load("xgb_model.sav")
+    pickled_scaler = joblib.load("scaler.sav")
     
     
     feature_columns = ['credit_score', 'country', 'gender', 'age', 'tenure', 'balance','products_number', 'credit_card','active_member', 'estimated_salary']
